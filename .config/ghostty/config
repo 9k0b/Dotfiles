@@ -1,0 +1,8 @@
+theme = theme-1
+
+font-family = "JetBrainsMono NFP ExtraBold"
+font-size = 9.5
+
+mouse-hide-while-typing = true
+
+title = "Terminal"
