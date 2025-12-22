@@ -1,0 +1,151 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 20,
+    "margin": "0px",
+    "name": "waybar1",
+
+    "modules-left": 
+    [
+    "image#arch",
+    "custom/weather",
+    "image#album-art",
+    "custom/media"
+    ],
+
+    "modules-center":
+    [
+    "pulseaudio",
+    "hyprland/window",
+    "custom/notification"
+    ],
+
+    "modules-right":
+    [
+    "custom/nvidia",
+    "cpu",
+    "temperature",
+    "memory",
+    "disk"
+    ],
+
+    "image#arch": {
+    "path": "/home/jakob/media/pictures/waybar/arch.png",
+    "size": 18,
+    "interval": 1,
+    "on-click": "kitty --hold -e fastfetch",
+    },
+
+    "custom/weather": {
+    "exec": "${HOME}/.config/waybar/Scripts/weather-module.sh Berlin+Germany",
+    "return-type": "json",
+    "format": "{}",
+    "tooltip": true,
+    "interval": 1,
+    "on-click": ""
+    },
+
+    "image#album-art": {
+    "exec":"/home/jakob/.config/waybar/Scripts/cover_image.sh",
+    "size": 20,
+    "interval": 1
+    },
+
+    "custom/media": {
+    "format": "{icon}{text}󰓇",
+    "escape": true,
+    "return-type": "json",
+    "max-length": 20,
+    "on-click": "playerctl play-pause playerctl next", 
+    "on-click-right": "playerctl stop",
+    "smooth-scrolling-threshold":1, // This value was tested using a trackpad, it should be lowered if using a mouse.
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "exec": "/home/jakob/.config/waybar/Scripts/mediaplayer.py 2> /dev/null",
+    "tooltip": true,
+    "tooltip-format": "{text}"
+    },
+
+
+    "pulseaudio": {
+    "format": "{volume}% {icon}",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-muted": "",
+    "format-icons": {
+        "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+        "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+        "hands-free": "",
+        "phone": "",
+        "phone-muted": "",
+        "portable": "",
+        "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"]
+    },
+
+    "hyprland/window": {
+    "format": " {}",
+    "rewrite": {
+        "(.*) — Mozilla Firefox": "🌎 $1",
+        "(.*) - fish": "> [$1]"
+    },
+    "separate-outputs": true,
+    "on-click": ""
+    },
+
+    "custom/notification": {
+    "tooltip": true,
+    "format": "<span size='10pt'>{icon}</span>",
+    "format-icons": {
+    "notification": "󱅫",
+    "none": "󰂜",
+    "dnd-notification": "󰂠",
+    "dnd-none": "󰪓",
+    "inhibited-notification": "󰂛",
+    "inhibited-none": "󰪑",
+    "dnd-inhibited-notification": "󰂛",
+    "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+    },
+
+
+    "custom/nvidia": {
+    "exec": "nvidia-smi --query-gpu=utilization.gpu,temperature.gpu --format=csv,nounits,noheader | sed 's/\\([0-9]\\+\\), \\([0-9]\\+\\)/\\1% 󰡁\\2/g'",
+    "format": "{} ",
+    "interval": 1,
+    "on-click": ""
+    },
+
+    "cpu": {
+    "interval": 1,
+    "format": "{}% ",
+    "max-length": 10,
+    "on-click": ""
+    },
+
+    "temperature": {
+    "format": "{temperatureC}°C ",
+    "on-click": ""
+    },
+
+    "memory": {
+    "interval": 2,
+    "format": "<span>{used:0.1f}G/{total:0.1f}G </span>",
+    "on-click": ""
+    },
+
+    "disk": {
+	"interval": 30,
+	"format": "{specific_free:0.2f}GB | {specific_total:0.2f}GB 󱛟",
+	"unit": "GB",
+    "on-click": ""
+    }
+}
