@@ -1,0 +1,44 @@
+
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+
+  /* ---- Logo ----------------------------------------------------------- */
+  "logo": {
+    "type":   "file",
+    "source": "~/.config/fastfetch/logo",
+    "width":  1,
+    "height": 1,
+    "padding": { "top": 0, "left": 0, "right": 2 },
+    "color": {
+      "1": "#decaa6",
+      "2": "#C74E11"
+    }
+  },
+
+  /* ---- Display / Separator ------------------------------------------- */
+  "display": {
+    "separator": "|",
+    "color": {
+      "keys":   "#C74E11",
+      "title":  "#decaa6"
+    }
+  },
+
+  /* ---- Welche Module sollen ausgegeben werden? ------------------------ */
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    "host",
+    "kernel",
+    "uptime",
+    "shell",
+    "wm",
+    "wmtheme",
+    "terminal",
+    "terminalfont",
+    "cpu",
+    "gpu",
+    "memory"
+  ]
+}
