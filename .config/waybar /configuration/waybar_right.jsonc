@@ -1,0 +1,45 @@
+{
+    "layer": "top",
+    "position": "right",
+    "width": 24,
+    "height": "1920",
+    "margin-top": 0,
+    "margin-bottom": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 0,
+    "name": "waybar2",
+    "modules-right": [
+        "network",
+        "clock",
+        "hyprland/workspaces",
+        "custom/shutdown",
+        "custom/reboot",
+        "custom/lock"
+    ],
+
+    "network": {
+    "interval": 1,
+    "interface": "wlan0",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-wifi": "{icon}",
+    "format-disconnected": "󰤭",
+    "format-ethernet": "󰈀",
+    "on-click": "",
+    "tooltip": true,
+    "tooltip-format": "󰢮 {ifname}\n󰩟 {ipaddr}/{cidr}\n{icon} {essid}\n󱑽 {signalStrength}% {signaldBm} dBm {frequency} MHz\n󰞒 {bandwidthDownBytes}\n󰞕 {bandwidthUpBytes}"
+    },
+
+    "clock": {
+    "interval": 1,
+    "format": "\n{:%d\n%m\n%y\n\n%H\n%M\n%S}",
+    "tooltip": true
+    },
+
+    "hyprland/workspaces": {
+    "persistent-workspaces": {
+             "*": 8, // 5 workspaces by default on every monitor
+
+    }
+    }
+}
