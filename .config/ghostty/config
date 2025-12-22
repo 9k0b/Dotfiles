@@ -4,5 +4,22 @@ font-family = "JetBrainsMono NFP ExtraBold"
 font-size = 9.5
 
 mouse-hide-while-typing = true
+window-show-tab-bar = never
+window-new-tab-position = end
+
+shell-integration = zsh
+window-decoration = false
+
 
 title = "Terminal"
+keybind = ctrl+shift+c=copy_to_clipboard
+
+keybind = ctrl+shift+t=new_tab
+keybind = alt+shift+w=close_tab
+keybind = alt+1=goto_tab_1
+keybind = alt+2=goto_tab_2
+keybind = alt+3=goto_tab_3
+keybind = alt+4=goto_tab_4
+keybind = alt+5=goto_tab_5
+
+keybind = alt+z=undo
