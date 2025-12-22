@@ -1,0 +1,214 @@
+* {
+    font-family: "Adwaita Sans", "JetBrainsMono Nerd Font Propo", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+
+    border-radius: 0px;
+    border: none;
+
+    min-width: 0;
+    min-height: 0;
+}
+
+tooltip {
+    background: transparent;
+    border: 1px solid #C5873F;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+tooltip label {
+    padding: 2px;
+    color: #D7C383;
+}
+
+#waybar {
+    border: 1px solid #C5873F;
+    border-left-width: 0;
+    border-radius: 6px 0 0 6px;
+    margin: 0 50px 0 20px;
+    border-right-width: 0;
+    opacity: 0.8;
+    background: linear-gradient(to right, #161618 0%, #decaa6 100%);
+}
+
+
+tooltip {
+    background-color: transparent;
+}
+
+#image.arch {
+    margin-left:  10px;
+    padding: 1px;
+}
+
+#image.arch:hover {
+    border: 1px solid #C5873F;
+    border-radius: 6px;
+}
+
+#custom-weather {
+    color: #FAD281;
+    font-family: "JetBrainsMono Nerd Font Propo", "oft-font-awesome", sans-serif;
+    font-weight: bold;
+    margin-left: 20px;
+    border: 1px solid #C5873F;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    border-left-width: 0;
+    border-right-width: 0;
+    background: linear-gradient(to right, #16120C 55%, #161618 100%);
+}
+
+#custom-weather:hover {
+    background: linear-gradient(to right, #161618 0%, #decaa1 100%);
+}
+
+#custom-media {
+    background: linear-gradient(to right, #161618 55%, #decaa6 100%);
+    padding-left: 3px;
+    border-radius: 0 6px 6px 0;
+    border: 1px solid #D7C383;
+    border-left-width: 0;
+    color: #FAD281;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+#custom-media:hover {
+    background: linear-gradient(to right, #161618 20%, #decaa6 100%);
+    margin-bottom: 2px;
+}
+
+#image.album-art {
+    padding-left: 3px;
+    margin-left: 20px;
+    border: 1px solid #D7C383;
+    border-right-width: 0;
+    border-left-width: 0;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#pulseaudio {
+    color: #C94E0C;
+    background: linear-gradient(to right, #decaa1 0%, #C5873F 100%);
+    border-radius: 6px 0 0 6px;
+    border: 1px solid #C94E0C;
+    border-right-width: 0;
+    font-size: 11px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+#pulseaudio:hover {
+    background: linear-gradient(to right, #decaa1 50%, #C5873F 100%);
+}
+
+#window {
+    color: #D7C383;
+    background: linear-gradient(180deg, #C5873F 0%, #C94E0C 100%);
+    border: 1px solid #FAD281;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 20px;
+    padding: 0 4px 0 4px;
+    border-right-width: 0;
+    border-left-width: 0;
+}
+
+#custom-notification {
+    color: #FAD281;
+    background: linear-gradient(to right, #C5873F 0%, #decaa1 100%);
+    border: 1px solid #FAD281;
+    border-radius: 0 6px 6px 0;
+    margin-left: 20px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 11px;
+    border-left-width: 0;
+}
+
+#custom-notification:hover {
+    background: linear-gradient(to right, #C5873F 0%, #decaa1 100%);
+    color: #C94E0C;
+}
+
+#custom-nvidia {
+    color: #C94E0C;
+    background: linear-gradient(to right, #C5873F 0%, #FAD281 100%);
+    border-radius: 6px 0 0 6px;
+    border: 1px solid   #C94E0C;
+    padding: 0 4px 0 4px ;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-right-width: 0;
+}
+
+#cpu {
+    background: linear-gradient(to right, #C5873F 0%, #FAD281 100%);
+    border: 1px solid #C94E0C;
+    color: #C94E0C;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    margin-left: 20px;
+    border-right-width: 0;
+    border-left-width: 0;
+}
+
+#cpu:hover {
+    background: linear-gradient(to right, #C5873F 30%, #FAD281 100%);
+}
+
+#temperature {
+    border: 1px solid #C94E0C;
+    color: #C94E0C;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    background: linear-gradient(to right, #FAD281 0%, #decaa1 100%);
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+#temperature:hover {
+    background: linear-gradient(to right, #FAD281 0%, #decaa1 100%);
+}
+
+#memory {
+    margin-left: 20px;
+    border: 1px solid #3a3938;
+    background: linear-gradient(to right,#C5873F 0%, #FAD281 100% );
+    padding-right: 4px;
+    padding-left: 4px;
+    color: #3a3938;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    border-left-width: 0;
+    border-right-width: 0;
+}
+
+#disk {
+    padding-left: 15px;
+    padding-right: 5px;
+    margin-right: 35px;
+    background: linear-gradient(to right, #FAD281 0%, #decaa1 100%);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border: 1px solid #3a3938;
+    color: #3a3938;
+    border-right-width: 0;
+    border-left-width: 0;
+}
+
+#disk:hover {
+    background: linear-gradient(to right, #FAD281 0%, #decaa1 100%);
+}
